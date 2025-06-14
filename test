@@ -1,33 +1,41 @@
 <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "description": "EUR/USD",
-      "proName": "CMCMARKETS:EURUSD"
-    },
-    {
-      "description": "BRL/USD",
-      "proName": "FX_IDC:BRLUSD"
-    },
-    {
-      "description": "BBRL/EUR",
-      "proName": "FX_IDC:BRLEUR"
-    },
-    {
-      "description": "BRL/CLP",
-      "proName": "FX_IDC:BRLCLP"
-    }
-  ],
-  "showSymbolLogo": true,
-  "isTransparent": false,
-  "displayMode": "regular",
-  "colorTheme": "dark",
-  "locale": "en"
-}
-  </script>
-</div>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ticker Tape – FX Rates</title>
+    <style>html,body{margin:0;padding:0}</style>
+  </head>
+  <body>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+          <span class="blue-text">Track all markets on TradingView</span>
+        </a>
+      </div>
+
+      <!-- script com o JSON de configuração -->
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+      {
+        "symbols": [
+          { "description": "EUR / USD", "proName": "FX:EURUSD"      },
+          { "description": "USD / BRL", "proName": "FX_IDC:USDBRL"  },
+          { "description": "EUR / BRL", "proName": "FX_IDC:EURBRL"  },
+          { "description": "BRL / CLP", "proName": "FX_IDC:BRLCLP"  }
+        ],
+        "showSymbolLogo": true,
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "colorTheme": "dark",
+        "locale": "pt_BR"
+      }
+      </script>
+    </div>
+  </body>
+</html>
 <!-- TradingView Widget END -->
